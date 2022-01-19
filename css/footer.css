@@ -46,9 +46,23 @@
   color: rgb(255, 255, 255);
 }
 
+.footer-contato a:hover {
+  color: #8f8f8f;
+  transition: 0.3s;
+}
+
+.footer-contato a {
+  text-decoration: none;
+}
+
 .link-email {
   text-decoration: none;
   color: #67dd0a;
+}
+
+.footer-copy a:hover {
+  color: #fff;
+  transition: 0.3s;
 }
 
 @media (max-width: 800px) {
