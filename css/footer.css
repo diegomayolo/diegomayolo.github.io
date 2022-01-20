@@ -18,17 +18,46 @@
   color: #ccc;
 }
 
-.footer-contato li {
-  /* font-weight: bold; */
-  font-size: 1.5rem;
-  line-height: 1.1;
-  color: #fff;
-  margin-bottom: 30px;
-  font-family: Arial, Helvetica, sans-serif;
+.footer-texto span {
+  color: #67dd0a;
 }
 
-.footer-contato li a {
-  color: #fff;
+.footer-contato li {
+  list-style-type: none;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 25px;
+  align-items: center;
+}
+
+.footer-contato a:hover {
+  color: #67dd0a;
+  transition: 0.5s;
+}
+
+.footer-contato a {
+  text-decoration: none;
+  color: #ccc;
+  padding-left: 25px;
+}
+
+.footer-contato li:nth-child(1) {
+  background: url("../img/email-40px.svg") no-repeat 0px 18px;
+}
+
+.footer-contato li:nth-child(2) {
+  background: url("../img/telefone-40px.svg") no-repeat 0px 18px;
+}
+
+.footer-contato li:nth-child(3) {
+  background: url("../img/linkedin-45px.svg") no-repeat 0px 13px;
+}
+
+.footer-copy a {
+  text-decoration: none;
+  color: #67dd0a;
 }
 
 .footer-copy {
@@ -36,28 +65,6 @@
   font-size: 1.125rem;
   color: #8f8f8f;
   text-align: center;
-}
-
-.footer-contato li p {
-  background-image: linear-gradient(to bottom, #67dd0a, #b6f829, #fff);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: rgb(255, 255, 255);
-}
-
-.footer-contato a:hover {
-  color: #8f8f8f;
-  transition: 0.3s;
-}
-
-.footer-contato a {
-  text-decoration: none;
-}
-
-.link-email {
-  text-decoration: none;
-  color: #67dd0a;
 }
 
 .footer-copy a:hover {
@@ -71,7 +78,24 @@
     gap: 40px;
   }
 
-  .footer-contato li {
+  .footer-contato a {
     font-size: 1.5rem;
+    justify-content: center;
+  }
+
+  .footer-contato li {
+    padding: 10px;
+  }
+
+  .footer-contato li:nth-child(1) {
+    background: url("../img/email-27px.svg") no-repeat 0px 13px;
+  }
+
+  .footer-contato li:nth-child(2) {
+    background: url("../img/telefone-27px.svg") no-repeat 0px 13px;
+  }
+
+  .footer-contato li:nth-child(3) {
+    background: url("../img/linkedin-27px.svg") no-repeat 0px 13px;
   }
 }
