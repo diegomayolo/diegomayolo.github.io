@@ -14,20 +14,24 @@
 </head>
 
 <body>
-    <header class="header">
-        <img src="/img/diego-mayolo-36px.svg" alt="Marca">
-        <nav>
-            <ul class="header-menu">
-                <li><a href="#experiencia">Experiência</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+    <header class="header-bg">
+        <header class="header">
+            <img src="/img/diego-mayolo-36px-white.svg" alt="Marca">
+            <nav>
+                <ul class="header-menu">
+                    <li><a href="#experiencia">Experiência</a></li>
+                    <li><a href="#formacao">Formação</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
     </header>
 
     <main class="introducao">
-        <img src="/img/dm-remove-borderradius.png" alt="Foto de perfil" width="195" height="320">
-        <div>
+        <div class="img-container">
+            <img src="/img/dm-remove-borderradius.png" alt="Foto de perfil" width="195" height="320">
+        </div>
+        <div class="img-container">
             <h1>Full Stack<br>Developer</h1>
             <p>Arroio do Meio - RS 🧉</p>
         </div>
@@ -91,28 +95,13 @@
     <footer class="footer" id="contato">
         <div class="contato footer-container">
             <p class="footer-texto">Entre em contato para maiores informações<span>.</span></p>
-            <!-- <ul class="footer-contato">
-                <li>
-                    <p>Email</p> <a class="link-email" href="mailto:diego.mayolo@outlook.com">diego.mayolo@outlook.com</a>
-                </li>
-                <li>
-                    <p>Fone</p><a href="tel:+5551994586794">+55 51 99458-6794</a>
-                </li>
-                <li>
-                    <p>Linkedin</p><a href="https://www.linkedin.com/in/diego-luis-mayolo-8a3a3210a/">diego-luis-mayolo-8a3a3210a</a>
-                </li>
-            </ul> -->
-
-            <address class="footer-contato">
-                <li><a class="link-email" href="mailto:diego.mayolo@outlook.com">diego.mayolo@outlook.com</a>
-                </li>
-                <li><a href="tel:+5551994586794">+55 51 99458-6794</a>
-                </li>
-                <li><a href="https://www.linkedin.com/in/diego-luis-mayolo-8a3a3210a/">diego-luis-mayolo-8a3a3210a</a>
-                </li>
-            </address>
+            <div class="footer-contato">
+                <li><a href="mailto:diego.mayolo@outlook.com"><img src="/img/email-40px.svg" /><span>diego.mayolo@outlook.com</span></a></li>
+                <li><a href="tel:+5551994586794"><img src="/img/telefone-40px.svg" /><span>+55 51 99458-6794</span></a></li>
+                <li><a href="https://github.com/diegomayolo"><img src="/img/github-40px.svg" /><span>github.com/diegomayolo</span></a></li>
+                <li><a href="https://www.linkedin.com/in/diego-luis-mayolo-8a3a3210a/"><img src="/img/linkedin-45px.svg" /><span>diego-luis-mayolo-8a3a3210a</span></a></li>
+            </div>
             <p class="footer-copy"><span>Created By <a href="mailto:diego.mayolo@outlook.com">Diego Luis Mayolo</a> © <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
-
         </div>
 
     </footer>
