@@ -1,5 +1,5 @@
-.footer {
-  background: #000;
+#contato {
+  background: #0a0a0a;
 }
 
 .footer-container {
@@ -18,7 +18,7 @@
 }
 
 .footer-texto span {
-  color: #67dd0a;
+  color: #0aa8dd;
 }
 
 .footer-contato {
@@ -53,13 +53,13 @@
 }
 
 .footer-contato a:hover {
-  color: #67dd0a;
+  color: #0aa8dd;
   transition: 0.5s;
 }
 
 .footer-copy a {
   text-decoration: none;
-  color: #67dd0a;
+  color: #0aa8dd;
 }
 
 .footer-copy {
@@ -72,6 +72,24 @@
 .footer-copy a:hover {
   color: #fff;
   transition: 0.3s;
+}
+
+.footer-button {
+  background-color: #0aa8dd;
+}
+
+.field > label {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: #0aa8dd;
+}
+
+.footer input,
+.footer textarea,
+.footer button {
+  background: #c0c0c0;
+  border: 1px solid black;
 }
 
 @media (max-width: 800px) {

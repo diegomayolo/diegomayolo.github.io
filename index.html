@@ -10,8 +10,8 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <script>document.documentElement.classList.add('js')</script>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         <header class="header">
             <img src="/img/diego-mayolo-36px-white.svg" alt="Marca">
             <nav>
-                <ul class="header-menu fadeInRight" data-anime="200">
+                <ul class="header-menu">
                     <li><a href="#experiencia">Experiência</a></li>
                     <li><a href="#formacao">Formação</a></li>
                     <li><a href="#contato">Contato</a></li>
@@ -30,9 +30,9 @@
 
     <main class="introducao">
         <div class="img-container">
-            <img class="fadeInUp" data-anime="400" src="/img/dm-remove-borderradius.png" alt="Foto de perfil" width="195" height="320">
+            <img src="/img/dm-remove-borderradius.png" alt="Foto de perfil" width="195" height="320">
         </div>
-        <div class="img-container fadeInRight" data-anime="600">
+        <div class="img-container">
             <h1>Full Stack<br>Developer</h1>
             <p>Arroio do Meio - RS 🧉</p>
         </div>
@@ -78,7 +78,9 @@
                         <h3>Cursos Intensivos</h3>
                         <ul>
                             <li>Java POO - Udemy <span>50h</span> </li>
-                            <li>Front End para Iniciantes - Origamid <span>23h</span> </li>
+                            <li>HTML e CSS para iniciantes - Origamid <span>46h</span> </li>
+                            <li>Javascript do básico ao avançado com Node - Udemy <span>22.5h</span> </li>
+                            <li>React Completo - Origamid <span>36h</span> </li>
                             <li>Inglês Mairo Vergara <span>--</span> </li>
                         </ul>
                     </div>
@@ -102,13 +104,48 @@
                 <li><a href="https://github.com/diegomayolo"><img src="/img/github-40px.svg" /><span>github.com/diegomayolo</span></a></li>
                 <li><a href="https://www.linkedin.com/in/diegomayolo/"><img src="/img/linkedin-45px.svg" /><span>linkedin.com/in/diegomayolo</span></a></li>
             </div>
-            <p class="footer-copy"><span>Created By <a href="mailto:diego.mayolo@outlook.com">Diego Luis Mayolo</a> © <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
-        </div>
 
+            <div>
+                <div class="field">
+                    <label class="label lb">Nome completo</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Nome Completo">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label lb">Email</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input is-danger" type="email" placeholder="Email">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span>
+                    </div>
+                    <p class="help is-danger">This email is invalid</p>
+                </div>
+
+                <div class="field">
+                    <label class="label lb">Mensagem</label>
+                    <div class="control">
+                        <textarea class="textarea" placeholder="Fique a vontade para tirar suas duvidas..."></textarea>
+                    </div>
+                </div>
+
+
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button footer-button">Enviar</button>
+                    </div>
+                </div>
+                <p class="footer-copy"><span>Created By <a href="mailto:diego.mayolo@outlook.com">Diego Luis Mayolo</a> © <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
+            </div>
+        </div>
     </footer>
 
-    <script src="/js/plugins/simple-anime.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="js/plugins/clipboard.min.js"></script>
 </body>
 
 </html>
