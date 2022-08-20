@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "bulma": "^0.9.3"
   }
 }

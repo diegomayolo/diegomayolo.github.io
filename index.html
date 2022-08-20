@@ -19,11 +19,35 @@
         <header class="header">
             <img src="/img/diego-mayolo-36px-white.svg" alt="Marca">
             <nav>
-                <ul class="header-menu">
+                <!-- <ul class="header-menu">
                     <li><a href="#experiencia">Experiência</a></li>
                     <li><a href="#formacao">Formação</a></li>
                     <li><a href="#contato">Contato</a></li>
-                </ul>
+                </ul> -->
+                <a href="#experiencia">
+                    <button>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span> Experiência
+                    </button>
+                </a>
+                <a href="#formacao">
+                    <button>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span> Formação
+                    </button>
+                </a>
+                <a href="#contato">
+                    <button>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span> Contato
+                    </button>
+                </a>
             </nav>
         </header>
     </header>
@@ -105,18 +129,25 @@
                 <li><a href="https://www.linkedin.com/in/diegomayolo/"><img src="/img/linkedin-45px.svg" /><span>linkedin.com/in/diegomayolo</span></a></li>
             </div>
 
-            <div>
+            <form id="contact-form">
                 <div class="field">
-                    <label class="label lb">Nome completo</label>
+                    <label class="label lb" value="name">Nome completo</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="Nome Completo">
+                        <input class="input" name="name" type="text" placeholder="Nome Completo">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label lb" value="name">Assunto</label>
+                    <div class="control">
+                        <input class="input" name="subject" type="text" placeholder="Assunto">
                     </div>
                 </div>
 
                 <div class="field">
                     <label class="label lb">Email</label>
                     <div class="control has-icons-left has-icons-right">
-                        <input class="input is-danger" type="email" placeholder="Email">
+                        <input class="input is-danger" name="name" type="email" placeholder="Email">
                         <span class="icon is-small is-left">
                             <i class="fas fa-envelope"></i>
                         </span>
@@ -130,7 +161,7 @@
                 <div class="field">
                     <label class="label lb">Mensagem</label>
                     <div class="control">
-                        <textarea class="textarea" placeholder="Fique a vontade para tirar suas duvidas..."></textarea>
+                        <textarea class="textarea" name="message" placeholder="Fique a vontade para tirar suas duvidas..."></textarea>
                     </div>
                 </div>
 
@@ -141,11 +172,19 @@
                     </div>
                 </div>
                 <p class="footer-copy"><span>Created By <a href="mailto:diego.mayolo@outlook.com">Diego Luis Mayolo</a> © <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
-            </div>
+            </form>
         </div>
     </footer>
 
     <script src="js/plugins/clipboard.min.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("ITNG9TnXJG8kJ4Y9x");
+        })();
+    </script>
 </body>
 
 </html>
