@@ -64,21 +64,6 @@ a {
   gap: 20px;
 }
 
-.img-container img {
-  width: 90%;
-  height: 90%;
-  border-radius: 30px;
-  background: #e0e0e0;
-  box-shadow: 10px 30px 20px #c4c4c4;
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-}
-
-.img-container:hover img {
-  -webkit-transform: scale(1.0);
-  transform: scale(1.1);
-}
-
 @media (max-width: 800px) {
   .header {
     flex-direction: column;
@@ -102,7 +87,7 @@ a {
 }
 
 /* From uiverse.io by @menezes11 */
-button {
+.btn-header {
   position: relative;
   padding: 0.5em 1em;
   outline: none;
@@ -119,11 +104,11 @@ button {
   font-weight: bold;
 }
 
-button span {
+.btn-header span {
   position: absolute;
 }
 
-button span:nth-child(1) {
+.btn-header span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -131,12 +116,12 @@ button span:nth-child(1) {
   background: linear-gradient(90deg, transparent, #aedded);
 }
 
-button:hover span:nth-child(1) {
+.btn-header:hover span:nth-child(1) {
   left: 100%;
   transition: 0.7s;
 }
 
-button span:nth-child(3) {
+.btn-header span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -144,13 +129,13 @@ button span:nth-child(3) {
   background: linear-gradient(90deg, transparent, #2e8eae);
 }
 
-button:hover span:nth-child(3) {
+.btn-header:hover span:nth-child(3) {
   right: 100%;
   transition: 0.7s;
   transition-delay: 0.35s;
 }
 
-button span:nth-child(2) {
+.btn-header span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -158,13 +143,13 @@ button span:nth-child(2) {
   background: linear-gradient(180deg, transparent, #196883);
 }
 
-button:hover span:nth-child(2) {
+.btn-header:hover span:nth-child(2) {
   top: 100%;
   transition: 0.7s;
   transition-delay: 0.17s;
 }
 
-button span:nth-child(4) {
+.btn-header span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -172,7 +157,7 @@ button span:nth-child(4) {
   background: linear-gradient(360deg, transparent, #042b38);
 }
 
-button:hover span:nth-child(4) {
+.btn-header:hover span:nth-child(4) {
   bottom: 100%;
   transition: 0.7s;
   transition-delay: 0.52s;

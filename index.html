@@ -7,6 +7,7 @@
     <title>Portfólio Diego Mayolo</title>
     <meta name="description" content="Desenvolvedor Full Stack, localizado em Arroio do Meio - RS">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,16 +17,11 @@
 
 <body>
     <header class="header-bg">
-        <header class="header">
+        <header class="header" id="header">
             <img src="/img/diego-mayolo-36px-white.svg" alt="Marca">
             <nav>
-                <!-- <ul class="header-menu">
-                    <li><a href="#experiencia">Experiência</a></li>
-                    <li><a href="#formacao">Formação</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul> -->
                 <a href="#experiencia">
-                    <button>
+                    <button class="btn-header">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -33,7 +29,7 @@
                     </button>
                 </a>
                 <a href="#formacao">
-                    <button>
+                    <button class="btn-header">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -41,7 +37,7 @@
                     </button>
                 </a>
                 <a href="#contato">
-                    <button>
+                    <button class="btn-header">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -63,11 +59,11 @@
     </main>
 
     <section class="experiencia" id="experiencia" aria-label="Experiência">
-        <h2 class="subtitulo">Experiência</h2>
+        <h2 data-anime="left" class="subtitulo">Experiência</h2>
         <div>
-            <p class="experiencia-texto">Trabalho com a linguagem <strong>Java</strong>, <strong>SQL</strong>, e desenvolvo pequenos projetos frontend utilizando apenas <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>.</p>
+            <p data-anime="down" class="experiencia-texto">Trabalho com a linguagem <strong>Java</strong>, <strong>SQL</strong>, e desenvolvo pequenos projetos frontend utilizando apenas <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>.</p>
 
-            <div class="empresa">
+            <div data-anime="right" class="empresa">
                 <span class="empresa-ano">2021</span>
                 <h3 class="empresa-titulo">Interact Solutions</h3>
                 <span class="empresa-titulo">Desenvolvedor Trainee</span>
@@ -82,8 +78,9 @@
             </div>
         </div>
     </section>
+
     <section class="formacao" id="formacao" aria-label="Formação">
-        <div class="formacao-container">
+        <div data-anime="left" class=" formacao-container">
             <h2 class="subtitulo">Formação</h2>
 
             <div>
@@ -119,67 +116,96 @@
             </div>
         </div>
     </section>
+
     <footer class="footer" id="contato">
         <div class="contato footer-container">
-            <p class="footer-texto">Entre em contato para maiores informações<span>.</span></p>
-            <div class="footer-contato">
-                <li><a href="mailto:diego.mayolo@outlook.com"><img src="/img/email-40px.svg" /><span>diego.mayolo@outlook.com</span></a></li>
-                <li><a href="tel:+5551994586794"><img src="/img/telefone-40px.svg" /><span>+55 51 99458-6794</span></a></li>
-                <li><a href="https://github.com/diegomayolo"><img src="/img/github-40px.svg" /><span>github.com/diegomayolo</span></a></li>
-                <li><a href="https://www.linkedin.com/in/diegomayolo/"><img src="/img/linkedin-45px.svg" /><span>linkedin.com/in/diegomayolo</span></a></li>
-            </div>
+            <section id="contact">
+                <div data-anime="up" class="contact-wrapper">
+                    <!-- Left contact page -->
+                    <form id="contact-form" class="form-horizontal" role="form">
+                        <!-- name input -->
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="name" placeholder="Name" name="name" value="" required>
+                            </div>
+                        </div>
+                        <!-- subject input -->
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="name" placeholder="Subject" name="subject" value="" required>
+                            </div>
+                        </div>
+                        <!-- email input -->
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="email" class="form-control" id="email" placeholder="Email" name="email" value="" required>
+                            </div>
+                        </div>
+                        <!-- message content -->
+                        <textarea class="form-control" rows="10" placeholder="Feel free to clear your doubts..." name="message" required></textarea>
+                        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                            <div class="alt-send-button">
+                                <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+                            </div>
+                        </button>
+                    </form>
 
-            <form id="contact-form">
-                <div class="field">
-                    <label class="label lb" value="name">Nome completo</label>
-                    <div class="control">
-                        <input class="input" name="name" type="text" placeholder="Nome Completo">
+                    <!-- Right contact page -->
+                    <div data-anime="right" class="direct-contact-container">
+                        <ul class="contact-list">
+                            <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Arroio do Meio, RS</span></i></li>
+                            <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:+555194586794" title="Give me a call">+55 51 99458-6794</a></span></i></li>
+                            <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:diego.mayolo@outlook.com" title="Send me an email">diego.mayolo@outlook.com</a></span></i></li>
+                        </ul>
+                        <hr>
+                        <ul class="social-media-list">
+                            <a href="https://github.com/diegomayolo" target="_blank" class="contact-icon">
+                                <li><i class="fa-brands fa-github" aria-hidden="true"></i></li>
+                            </a>
+                            <a href="https://www.linkedin.com/in/diegomayolo/" target="_blank" class="contact-icon">
+                                <li><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></li>
+                            </a>
+                            <a href="https://www.facebook.com/diego.mayolo" target="_blank" class="contact-icon">
+                                <li><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></li>
+                            </a>
+                            <a href="https://www.instagram.com/diegomayolo/" target="_blank" class="contact-icon">
+                                <li><i class="fa-brands fa-instagram" aria-hidden="true"></i></li>
+                            </a>
+                        </ul>
+                        <hr>
+                        <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="field">
-                    <label class="label lb" value="name">Assunto</label>
-                    <div class="control">
-                        <input class="input" name="subject" type="text" placeholder="Assunto">
-                    </div>
+                <div data-anime="up" class="back-to-top">
+                    <a href="#header">
+                        <button class="btn-back-to-top">
+                            <div class="text">
+                                <span>Back</span>
+                                <span>to</span>
+                                <span>top</span>
+                            </div>
+                            <div class="clone">
+                                <span>Back</span>
+                                <span>to</span>
+                                <span>top</span>
+                            </div>
+                            <svg width="20px" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </button>
+                    </a>
                 </div>
-
-                <div class="field">
-                    <label class="label lb">Email</label>
-                    <div class="control has-icons-left has-icons-right">
-                        <input class="input is-danger" name="name" type="email" placeholder="Email">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-envelope"></i>
-                        </span>
-                        <span class="icon is-small is-right">
-                            <i class="fas fa-exclamation-triangle"></i>
-                        </span>
-                    </div>
-                    <p class="help is-danger">This email is invalid</p>
-                </div>
-
-                <div class="field">
-                    <label class="label lb">Mensagem</label>
-                    <div class="control">
-                        <textarea class="textarea" name="message" placeholder="Fique a vontade para tirar suas duvidas..."></textarea>
-                    </div>
-                </div>
-
-
-                <div class="field is-grouped">
-                    <div class="control">
-                        <button class="button footer-button">Enviar</button>
-                    </div>
-                </div>
-                <p class="footer-copy"><span>Created By <a href="mailto:diego.mayolo@outlook.com">Diego Luis Mayolo</a> © <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
-            </form>
+            </section>
         </div>
     </footer>
-
+    <!-- scripts -->
     <script src="js/plugins/clipboard.min.js"></script>
     <script src="js/script.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
+    <script src="https://kit.fontawesome.com/5a920dee85.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
         (function () {
             emailjs.init("ITNG9TnXJG8kJ4Y9x");

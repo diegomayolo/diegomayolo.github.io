@@ -26,3 +26,29 @@ window.onload = function () {
       );
     });
 };
+
+document.querySelector('#contact-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  e.target.elements.name.value = '';
+  e.target.elements.email.value = '';
+  e.target.elements.message.value = '';
+});
+
+//animar todos os itens da tela que tiverem o atributo [data-anime]
+const items = document.querySelectorAll('[data-anime]');
+
+const animeScroll = () => {
+  const windowTop = window.pageYOffset + window.innerHeight * 0.85;
+
+  items.forEach((element) => {
+    if (windowTop > element.offsetTop) {
+      element.classList.add('animate');
+    } else {
+      element.classList.remove('animate');
+    }
+  });
+};
+
+window.addEventListener('scroll', () => {
+  animeScroll();
+});
