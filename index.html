@@ -11,7 +11,7 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
@@ -117,32 +117,47 @@
         </div>
     </section>
 
-    <footer class="footer" id="contato">
+    <!-- <footer class="footer" id="contato">
         <div class="contato footer-container">
             <section id="contact">
-                <div data-anime="up" class="contact-wrapper">
-                    <!-- Left contact page -->
+                <div data-anime="right" class="contact-wrapper">
+                    Left contact page
                     <form id="contact-form" class="form-horizontal" role="form">
-                        <!-- name input -->
-                        <div class="form-group">
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control" id="name" placeholder="Name" name="name" value="" required>
+                        <div class="name-and-email">
+                            name input
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <label class="form-label">Name</label>
+                                    <input class="input-field" required type="text" id="name" name="name" autocomplete="on">
+                                </div>
+                            </div>
+
+                            email input
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <label class="form-label">Email</label>
+                                    <input class="input-field" required type="email" name="email" id="email" autocomplete="on">
+                                </div>
                             </div>
                         </div>
-                        <!-- subject input -->
+
+                        subject input
                         <div class="form-group">
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control" id="name" placeholder="Subject" name="subject" value="" required>
+                            <div class="input-group">
+                                <label class="form-label">Subject</label>
+                                <input class="input-field" required type="text" name="subject" id="subject" autocomplete="on">
                             </div>
                         </div>
-                        <!-- email input -->
+
+                        message content
                         <div class="form-group">
-                            <div class="col-sm-12">
-                                <input type="email" class="form-control" id="email" placeholder="Email" name="email" value="" required>
+                            <div class="input-group">
+                                <label class="form-label">Email</label>
+                                <textarea class="textarea input-field" rows="6" placeholder="Feel free to clear your doubts..." name="message" required></textarea>
                             </div>
                         </div>
-                        <!-- message content -->
-                        <textarea class="form-control" rows="10" placeholder="Feel free to clear your doubts..." name="message" required></textarea>
+
+                        send button
                         <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
                             <div class="alt-send-button">
                                 <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
@@ -150,7 +165,7 @@
                         </button>
                     </form>
 
-                    <!-- Right contact page -->
+                    Right contact page
                     <div data-anime="right" class="direct-contact-container">
                         <ul class="contact-list">
                             <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Arroio do Meio, RS</span></i></li>
@@ -178,7 +193,7 @@
                     </div>
                 </div>
 
-                <div data-anime="up" class="back-to-top">
+                <div data-anime="right" class="back-to-top">
                     <a href="#header">
                         <button class="btn-back-to-top">
                             <div class="text">
@@ -199,7 +214,7 @@
                 </div>
             </section>
         </div>
-    </footer>
+    </footer>  -->
     <!-- scripts -->
     <script src="js/plugins/clipboard.min.js"></script>
     <script src="js/script.js"></script>
