@@ -6,22 +6,16 @@
   max-width: 1200px;
   padding: 90px 20px 30px 20px;
   margin: 0 auto;
-  display: grid;
   gap: 20px;
-}
-
-.back-to-top {
-  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 60px;
 }
 
 /* form */
 .name-and-email {
   display: flex;
   justify-content: space-between;
+  gap: 70px;
 }
 
 .section-header {
@@ -56,8 +50,11 @@
   gap: 12px;
 }
 
-/* inputs */
+.form-group {
+  width: 100%;
+}
 
+/* inputs */
 .input-group {
   position: relative;
   width: 100%;
@@ -126,7 +123,7 @@
   color: #e8e8e8;
   font-size: 14px;
   font-weight: 500;
-  padding: 10px;
+  padding: 10px 10px;
   width: 100%;
   border-left: none;
   border-bottom: none;
@@ -161,6 +158,9 @@
 /* Begin Right Contact Page */
 .direct-contact-container {
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 /* Location, Phone, Email Section */
@@ -307,6 +307,7 @@ hr {
 }
 
 .send-button {
+  cursor: pointer;
   margin-top: 15px;
   height: 34px;
   width: 100%;
@@ -346,6 +347,14 @@ hr {
 }
 
 /* Begin Media Queries*/
+@media screen and (max-width: 1100px) {
+  .name-and-email {
+    /* display: flex; */
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
 @media screen and (max-width: 850px) {
   .contact-wrapper {
     display: flex;
@@ -356,11 +365,6 @@ hr {
   .form-horizontal {
     margin: 0 auto;
     width: 100%;
-  }
-
-  .direct-contact-container {
-    margin-top: 60px;
-    max-width: 300px;
   }
 
   .social-media-list li {
@@ -403,7 +407,6 @@ hr {
   }
 
   .direct-contact-container {
-    margin-top: 60px;
     max-width: 280px;
   }
 
@@ -426,12 +429,8 @@ hr {
 }
 
 @media screen and (max-width: 450px) {
-  .send-button {
-    width: 99%;
-  }
-
   .contact-list {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .social-media-list {
@@ -444,9 +443,5 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .contact-wrapper {
-    gap: 0;
   }
 }
