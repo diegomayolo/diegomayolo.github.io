@@ -63,28 +63,44 @@ window.addEventListener('scroll', () => {
 
 // hamburguer function
 /* Open Menu bar */
-var iconMenu = document.querySelector('.iconmenu'),
-  iconOpen = document.querySelector('.iconopen'),
+var navShow = document.querySelector('.navshow'),
+  buttonExpand = document.querySelector('.button-expand'),
+  arrow = document.querySelector('.fa-solid'),
   navBar = document.querySelector('.nav');
 
-iconMenu.addEventListener('click', openNav);
+buttonExpand.addEventListener('click', openNav);
 
+/**
+ * If the navbar is open, close it, and if it's closed, open it.
+ */
 function openNav() {
-  if (iconOpen.classList.contains('close')) {
-    iconOpen.classList.remove('close');
-  } else {
-    iconOpen.classList.add('close');
-  }
+  navShow.style.transform = 'scaleY(1)';
 
-  if (navBar.classList.contains('navshow')) {
+  if (
+    navBar.classList.contains('navshow') &&
+    buttonExpand.classList.contains('button-down')
+  ) {
     navBar.classList.remove('navshow');
+    buttonExpand.classList.remove('button-down');
   } else {
     navBar.classList.add('navshow');
+    buttonExpand.classList.add('button-down');
+  }
+
+  if (arrow.classList.contains('fa-angle-down')) {
+    arrow.classList.remove('fa-angle-down');
+    arrow.classList.add('fa-angle-up');
+  } else {
+    arrow.classList.remove('fa-angle-up');
+    arrow.classList.add('fa-angle-down');
   }
 }
-/* end Open Menu bar */
 
 /* Back to top */
+/**
+ * Scroll to the top of the page in 600 milliseconds by scrolling up 15 pixels every 15 milliseconds.
+ * @param scrollDuration - the duration of the scroll in milliseconds.
+ */
 var toTop = document.getElementById('scrollme');
 
 toTop.addEventListener('click', function () {
@@ -98,4 +114,28 @@ function scrollToTop(scrollDuration) {
         window.scrollBy(0, scrollStep);
       } else clearInterval(scrollInterval);
     }, 15);
+}
+
+/**
+ * It validates an email address by checking if it matches a regular expression.
+ * @returns the value of the setTimeout function.
+ */
+function validateEmail() {
+  var input = document.getElementById('email');
+  var result = document.getElementById('validate-result');
+
+  var validRegex =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  this.timeout = setTimeout(function () {
+    if (input.value.match(validRegex)) {
+      result.style.color = '#4DED75';
+      result.innerText = 'email válido';
+      return true;
+    } else {
+      result.style.color = 'red';
+      result.innerText = 'email inválido';
+      return false;
+    }
+  }, 1500);
 }
