@@ -16,8 +16,12 @@
 
 <body>
     <header class="header-bg">
-        <header class="header" id="header">
-            <img src="/img/diego-mayolo-36px-white.svg" alt="Marca">
+        <div class="header" id="header">
+            <div class="title-header">
+                <p class="name">DIEGO <span>MAYOLO</span></p>
+                <p class="function">FULLSTACK DEVELOPER</p>
+            </div>
+            <!-- <img src="/img/diego-mayolo-36px-white.svg" alt="Marca"> -->
             <div>
                 <nav>
                     <div class="nav navshow">
@@ -59,29 +63,37 @@
                     <i class="fa-solid fa-angle-down"></i>
                 </div>
             </div>
-        </header>
+        </div>
     </header>
-
 
     <main class="introducao">
         <div class="img-container">
             <img src="/img/dm-remove-borderradius.png" alt="Foto de perfil" width="195" height="320">
         </div>
-        <div class="img-container">
-            <h1>Full Stack<br>Developer</h1>
-            <p>Arroio do Meio - RS 🧉</p>
+        <div class="about-me">
+            <p>Olá, eu sou</p>
+            <h1 class="name">Diego Luis<br>Mayolo</h1>
+            <div class="city">
+                <i class="fa fa-map-marker"><span>Arroio do Meio, RS 🧉</span></i></li>
+            </div>
         </div>
     </main>
 
-    <section class="experiencia" id="experiencia" aria-label="Experiência">
+    <section class="experiencia-container" id="experiencia" aria-label="Experiência">
         <h2 class="subtitulo">Experiência</h2>
-        <div>
-            <p class="experiencia-texto">Trabalho com a linguagem <strong>Java</strong>, <strong>SQL</strong>, e desenvolvo pequenos projetos frontend utilizando apenas <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>.</p>
-
+        <div class="right-side">
+            <div class="experiencia-content">
+                <p class="texto">
+                    &nbsp&nbsp&nbsp&nbsp Sou um profissional dinâmico e adaptativo que busca sempre contribuir com o todo. Acredito muito em trabalho em equipe e em comunicação contínua, clara e objetiva.
+                </p>
+                <p class="texto">
+                    &nbsp&nbsp&nbsp&nbsp Escolhi a área de software para atuação, pois me agrada muito o fato de ter a possibilidade de criarmos praticamente qualquer coisa e ajudar diversos setores.
+                </p>
+            </div>
             <div data-anime="right" class="empresa">
                 <span class="empresa-ano">2021</span>
                 <h3 class="empresa-titulo">Interact Solutions</h3>
-                <span class="empresa-titulo">Desenvolvedor Trainee</span>
+                <span class="empresa-titulo">Desenvolvedor de Software</span>
                 <p class="empresa-texto">Na Interact Solutions, trabalho com o desenvolvimento de sistema web, utilizando principalmente a linguagem Java.</p>
                 <ul class="empresa-habilidades">
                     <li>Java</li>
@@ -95,13 +107,17 @@
     </section>
 
     <section class="formacao" id="formacao" aria-label="Formação">
-        <div data-anime="left" class=" formacao-container">
+        <div data-anime="left" class="formacao-container">
             <h2 class="subtitulo">Formação</h2>
-
-            <div data-anime2="right">
-                <p class="formacao-texto">
-                    Atualmente estou cursando <strong>Análise e Desenvolvimento de Sistemas</strong>. Além disso, me mantenho sempre atualizado com cursos intensivos online
-                </p>
+            <div class="right-side" data-anime2="right">
+                <div class="formação-content">
+                    <p class="texto">
+                        &nbsp&nbsp&nbsp&nbsp Possuo como formação principal, <strong>Análise e Desenvolvimento de Sistemas</strong>. Além disso, me mantenho sempre atualizado com cursos intensivos online
+                    </p>
+                    <p class="texto">
+                        &nbsp&nbsp&nbsp&nbsp Busco atualização constante e tenho curiosidade por novas tecnologias, pois sempre há uma forma de melhorar e evoluir, inclusive o que já funciona. Ainda, diariamente aprimorando o aprendizado com a língua inglesa.
+                    </p>
+                </div>
                 <ul class="faculdade-lista">
                     <li class="faculdade">
                         <span class="faculdade-tipo">Graduação</span>
@@ -117,7 +133,8 @@
                             <li class="hvr-icon-pulse-grow">HTML e CSS para iniciantes - Origamid <span class="hvr-icon">46h</span> </li>
                             <li class="hvr-icon-pulse-grow">Javascript do básico ao avançado com Node - Udemy <span class="hvr-icon">22.5h</span> </li>
                             <li class="hvr-icon-pulse-grow">React Completo - Origamid <span class="hvr-icon">36h</span> </li>
-                            <li class="hvr-icon-pulse-grow">Inglês Mairo Vergara <span class="hvr-icon">--</span> </li>
+                            <li class="hvr-icon-pulse-grow">Full Stack Javascript - Onebitcode <span class="hvr-icon"><i>(andamento)</i></span> </li>
+                            <li class="hvr-icon-pulse-grow">Inglês Mairo Vergara <span class="hvr-icon"><i>(andamento)</i></span> </li>
                         </ul>
                     </div>
                     <div class="idiomas">

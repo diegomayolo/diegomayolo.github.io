@@ -29,15 +29,26 @@
   max-width: 5ch;
 }
 
-.formacao-texto {
-  font-size: 1.5rem;
-  line-height: 1.33;
-  max-width: 40ch;
-  margin-bottom: 60px;
+.formacao-container > .right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.formação-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formação-content .texto {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  max-width: 50ch;
   color: #a3a3a3;
 }
 
-.formacao-texto strong {
+.formação-content .texto strong {
   color: #ffffff;
 }
 

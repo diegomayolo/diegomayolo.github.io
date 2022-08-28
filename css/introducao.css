@@ -1,6 +1,11 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url(/fonts/ubuntu.regular.ttf);
+}
+
 .introducao {
   max-width: 1200px;
-  padding: 70px 20px;
+  padding: 160px 20px 70px 20px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -33,13 +38,28 @@
 }
 
 .img-container img {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   border-radius: 30px;
   background: #e0e0e0;
   box-shadow: 10px 30px 20px #c4c4c4;
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
+}
+
+.about-me {
+  font-family: "Ubuntu";
+}
+.about-me p {
+  font-size: 40px;
+}
+.about-me .name {
+  font-size: 90px;
+}
+.about-me .city span {
+  font-size: 20px;
+  letter-spacing: 3px;
+  padding-left: 10px;
 }
 
 .img-container:hover img {
@@ -59,23 +79,45 @@
     gap: 40px;
   }
 
-  .introducao h1 {
-    font-size: 2rem;
+  .about-me p {
+    font-size: 1.5rem;
   }
 
-  .introducao h1::before {
+  .about-me .name {
+    font-size: 2.5rem;
+  }
+
+  .about-me .name::before {
     width: 30px;
     height: 10px;
+    top: -36px;
     left: 0px;
+  }
+
+  .about-me .city span {
+    font-size: 20px;
+    letter-spacing: 3px;
+    padding-left: 10px;
+  }
+
+  .img-container img {
+    width: 70%;
+    height: 70%;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 490px) {
   .introducao {
     grid-template-columns: 1fr;
-    padding: 20px;
+    padding: 91px 20px 20px 20px;
   }
   .introducao img {
     display: none;
+  }
+
+  .about-me .city span {
+    font-size: 16px;
+    letter-spacing: 3px;
+    padding-left: 10px;
   }
 }
