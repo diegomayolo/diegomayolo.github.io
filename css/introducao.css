@@ -49,6 +49,11 @@
 
 .about-me {
   font-family: "Ubuntu";
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
 .about-me p {
   font-size: 40px;
@@ -62,9 +67,45 @@
   padding-left: 10px;
 }
 
+.about-me .city > i::before {
+  font-size: 20px;
+}
+
 .img-container:hover img {
   -webkit-transform: scale(1.0);
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+/* download button  */
+.button-download-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  justify-content: flex-end;
+}
+
+.button-download {
+  font-size: 17px;
+  padding: 0.5em 2em;
+  border: transparent;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background: dodgerblue;
+  color: white;
+  border-radius: 4px;
+}
+
+.button-download:hover {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 144, 255, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.button-download:active {
+  transform: translate(0em, 0.2em);
 }
 
 @media (max-width: 1000px) {
@@ -84,20 +125,24 @@
   }
 
   .about-me .name {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 
   .about-me .name::before {
     width: 30px;
     height: 10px;
-    top: -36px;
+    top: -60px;
     left: 0px;
   }
 
   .about-me .city span {
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 3px;
     padding-left: 10px;
+  }
+
+  .about-me .city > i::before {
+    font-size: 16px;
   }
 
   .img-container img {
@@ -106,6 +151,12 @@
   }
 }
 
+@media (max-width: 690px) {
+  .about-me .city span,
+  .about-me .city > i::before {
+    font-size: 15px;
+  }
+}
 @media (max-width: 490px) {
   .introducao {
     grid-template-columns: 1fr;
@@ -119,5 +170,8 @@
     font-size: 16px;
     letter-spacing: 3px;
     padding-left: 10px;
+  }
+  .about-me .name {
+    font-size: 3rem;
   }
 }

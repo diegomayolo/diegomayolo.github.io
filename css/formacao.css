@@ -13,7 +13,7 @@
   position: relative;
 }
 
-.formacao-container::after {
+.formacao-extra::after {
   content: "";
   display: block;
   width: 130px;
@@ -100,6 +100,15 @@
 
 .cursos {
   margin-bottom: 60px;
+}
+
+.formacao-extra {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  position: relative;
 }
 
 .formacao-extra h3 {

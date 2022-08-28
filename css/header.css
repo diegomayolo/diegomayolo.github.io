@@ -188,7 +188,7 @@ a {
 .title-header .name {
   width: 100%;
   color: white;
-  font-size: 41px;
+  font-size: 43px;
   font-weight: bold;
   font-family: "Ubuntu", sans-serif;
 }
@@ -242,7 +242,7 @@ a {
   }
 
   .title-header .name {
-    font-size: 30px;
+    font-size: 31px;
   }
 
   .title-header .function {
@@ -325,12 +325,8 @@ nav .nav .menu .menu-item {
   box-sizing: border-box;
 }
 
-@media (max-width: 799px) {
-  nav .nav .menu .menu-item {
-    font-size: 13px;
-    letter-spacing: 1px;
-    height: 30px;
-  }
+nav .nav .menu .menu-item:hover:after {
+  width: 35px;
 }
 
 @media (max-width: 860px) {
@@ -347,14 +343,14 @@ nav .nav .menu .menu-item {
     letter-spacing: 2px;
     color: #848484;
   }
-}
 
-nav .nav .menu .menu-item:hover:after {
-  width: 35px;
-}
-
-@media (max-width: 799px) {
   nav .nav .menu .menu-item:hover:after {
     width: 0px;
+  }
+
+  nav .nav .menu .menu-item {
+    font-size: 13px;
+    letter-spacing: 1px;
+    height: 30px;
   }
 }
