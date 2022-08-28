@@ -42,6 +42,7 @@ ul {
   line-height: 1;
   text-transform: uppercase;
   max-width: 4ch;
+  color: #4d4d4d;
 }
 
 @media (max-width: 800px) {

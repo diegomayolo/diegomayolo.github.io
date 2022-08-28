@@ -8,7 +8,7 @@
 }
 
 .experiencia-container .subtitulo {
-  color: #e0e0e0;
+  color: #4d4d4d;
 }
 
 .experiencia-container > .right-side {
@@ -26,7 +26,7 @@
 .experiencia-content .texto {
   font-size: 1.3rem;
   line-height: 1.2;
-  max-width: 50ch;
+  width: 100%;
   color: #525252;
   white-space: normal;
 }
@@ -51,7 +51,7 @@
   display: block;
   width: 4px;
   height: 20px;
-  background: linear-gradient(#45c4ef, #0aa8dd);
+  background: #4d4d4d;
   position: absolute;
   top: 20px;
   left: -4px;
