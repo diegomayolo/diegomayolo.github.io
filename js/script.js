@@ -9,6 +9,8 @@ function sendForm() {
 
 /* Listening to the submit event of the form and preventing the default behavior of the event. */
 window.onload = function () {
+  const divEmailValidation = document.getElementById('validate-result');
+
   document
     .getElementById('contact-form')
     .addEventListener('submit', function (event) {
@@ -28,15 +30,18 @@ window.onload = function () {
           console.log('FAILED...', error);
         },
       );
+
+      // limpar todos os campos do formulário após realizar o envio do email
+      event.preventDefault();
+      event.target.elements.name.value = '';
+      event.target.elements.email.value = '';
+      event.target.elements.subject.value = '';
+      event.target.elements.message.value = '';
+
+      // excluir conteúdo da relacionado a validação do email após realizar o envio do email
+      divEmailValidation.innerText = '';
     });
 };
-
-document.querySelector('#contact-form').addEventListener('submit', (e) => {
-  e.preventDefault();
-  e.target.elements.name.value = '';
-  e.target.elements.email.value = '';
-  e.target.elements.message.value = '';
-});
 
 //animar todos os itens da tela que tiverem o atributo [data-anime]
 const items = document.querySelectorAll('[data-anime]');
