@@ -316,21 +316,21 @@ hr {
   /* padding: 0.75em 1.125em; */
 }
 
-.send-button .send-button-div:nth-child(1) {
+.send-button .send-button-div {
   background-color: #1e90ff;
 }
 
-.send-button .send-button-div:nth-child(2) {
+/* .send-button .send-button-div:nth-child(2) {
   background-color: #21dc62;
-}
+} */
 
-.send-button:hover {
+/* .send-button:hover {
   box-shadow: 0 0.625em 1em 0 rgba(33, 220, 98, 0.35);
 }
 
 .send-button:hover .send-button-div {
   transform: translateY(-34px);
-}
+} */
 
 .send-button .send-button-p {
   font-size: 15px;

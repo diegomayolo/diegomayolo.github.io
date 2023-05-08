@@ -1,47 +1,47 @@
-/**
- * The function is called sendForm() and it is called when the user clicks the submit button.
- */
-function sendForm() {
-  // https://dashboard.emailjs.com/admin/account
-  // Public Key = ITNG9TnXJG8kJ4Y9x
-  emailjs.init('ITNG9TnXJG8kJ4Y9x');
-}
+// /**
+//  * The function is called sendForm() and it is called when the user clicks the submit button.
+//  */
+// function sendForm() {
+//   // https://dashboard.emailjs.com/admin/account
+//   // Public Key = ITNG9TnXJG8kJ4Y9x
+//   emailjs.init('ITNG9TnXJG8kJ4Y9x');
+// }
 
-/* Listening to the submit event of the form and preventing the default behavior of the event. */
-window.onload = function () {
-  const divEmailValidation = document.getElementById('validate-result');
+// /* Listening to the submit event of the form and preventing the default behavior of the event. */
+// window.onload = function () {
+//   const divEmailValidation = document.getElementById('validate-result');
 
-  document
-    .getElementById('contact-form')
-    .addEventListener('submit', function (event) {
-      event.preventDefault();
-      // service id no email que deseja receber as notificações
-      // https://dashboard.emailjs.com/admin
-      // YOUR_SERVICE_ID = service_cyuup0j
+//   document
+//     .getElementById('contact-form')
+//     .addEventListener('submit', function (event) {
+//       event.preventDefault();
+//       // service id no email que deseja receber as notificações
+//       // https://dashboard.emailjs.com/admin
+//       // YOUR_SERVICE_ID = service_cyuup0j
 
-      // id do template (modelo de email)
-      // https://dashboard.emailjs.com/admin/templates
-      // YOUR_TEMPLATE_ID = template_tqutueb
-      emailjs.sendForm('service_cyuup0j', 'template_tqutueb', this).then(
-        function () {
-          console.log('SUCCESS!');
-        },
-        function (error) {
-          console.log('FAILED...', error);
-        },
-      );
+//       // id do template (modelo de email)
+//       // https://dashboard.emailjs.com/admin/templates
+//       // YOUR_TEMPLATE_ID = template_tqutueb
+//       emailjs.sendForm('service_cyuup0j', 'template_tqutueb', this).then(
+//         function () {
+//           console.log('SUCCESS!');
+//         },
+//         function (error) {
+//           console.log('FAILED...', error);
+//         },
+//       );
 
-      // limpar todos os campos do formulário após realizar o envio do email
-      event.preventDefault();
-      event.target.elements.name.value = '';
-      event.target.elements.email.value = '';
-      event.target.elements.subject.value = '';
-      event.target.elements.message.value = '';
+//       // limpar todos os campos do formulário após realizar o envio do email
+//       event.preventDefault();
+//       event.target.elements.name.value = '';
+//       event.target.elements.email.value = '';
+//       event.target.elements.subject.value = '';
+//       event.target.elements.message.value = '';
 
-      // excluir conteúdo da relacionado a validação do email após realizar o envio do email
-      divEmailValidation.innerText = '';
-    });
-};
+//       // excluir conteúdo da relacionado a validação do email após realizar o envio do email
+//       divEmailValidation.innerText = '';
+//     });
+// };
 
 //animar todos os itens da tela que tiverem o atributo [data-anime]
 const items = document.querySelectorAll('[data-anime]');
@@ -144,3 +144,19 @@ function validateEmail() {
     }
   }, 1500);
 }
+
+/**
+ * When the button is clicked, change the button's box shadow, background color, and text to a green
+ * color and the word 'THANKS'.
+ */
+function thankSend()
+{
+  const btn = document.getElementsByClassName('send-button');
+  btn[0].style.boxShadow = "0 0.625em 1em 0 rgba(33, 220, 98, 0.35)";
+  
+  const div = document.getElementsByClassName('send-button-div');
+  div[0].style.backgroundColor = "#21dc62";
+  
+  const p = document.getElementsByClassName('send-button-p');
+  p[0].innerText = "THANKS";
+};
